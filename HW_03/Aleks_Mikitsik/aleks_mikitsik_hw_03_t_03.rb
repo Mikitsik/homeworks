@@ -9,7 +9,7 @@ end
 
 def filtered(message)
   cut(message).reject(&:nil?).reverse \
-           .map { |x| x.round(-3) * 0.6 + x - x.round(-3) }
+              .map { |x| x.round(-3) * 0.6 + x - x.round(-3) }
 end
 
 def task_3(message)
