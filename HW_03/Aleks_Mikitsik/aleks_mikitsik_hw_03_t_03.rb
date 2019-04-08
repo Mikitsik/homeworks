@@ -1,5 +1,5 @@
-def cut(msge)
-  msge.each_line.map do |line|
+def cut(message)
+  message.each_line.map do |line|
     next unless line.include?('Calling core with action')
 
     line.match(/^\d{4}[\-\d{2}]*{2}\s[\d{2}\:]*{2}\d{2}\.\d/)
@@ -7,13 +7,13 @@ def cut(msge)
   end
 end
 
-def filtered(msge)
-  cut(msge).reject(&:nil?).reverse \
+def filtered(message)
+  cut(message).reject(&:nil?).reverse \
            .map { |x| x.round(-3) * 0.6 + x - x.round(-3) }
 end
 
-def task_03(msge)
-  return '0' if filtered(msge) == []
+def task_3(message)
+  return '0' if filtered(message) == []
 
-  (filtered(msge).reduce(:-) * 0.1).to_s
+  (filtered(message).reduce(:-) * 0.1).to_s
 end
