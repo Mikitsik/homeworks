@@ -1,6 +1,7 @@
-def one_arr(arr)
-	@one_arr = []
-	arr.map { |e| @one_arr << e  }
+def under_the_hood(array)
+  array.join.split('').sort.reverse.uniq
 end
 
-p one_arr([7, 3, [4, 5, 1], 1, 9, [2, 8, 1]])
+def task_4_3(array)
+  under_the_hood(array).map(&:to_i)
+end
