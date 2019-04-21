@@ -1,24 +1,22 @@
-require_relative "human"
-require_relative "mentor"
-require_relative "student"
-require_relative "homework"
+require 'json'
+require 'net/http'
+require 'uri'
+require_relative 'human'
+require_relative 'mentor'
+require_relative 'student'
+require_relative 'homework'
 
-mr_aleksandr = Mentor.new({first_name: "Aleksandr", last_name: "Shagov"})
-mr_maksim = Mentor.new({first_name: "Maksim", last_name: "Holubeu"})
+mentor = Mentor.new({first_name: "Piotr", last_name: "Piatrou"})
+student = Student.new({first_name: "Ivan", last_name: "Ivanou"})
 
-st_mikitsik = Student.new({first_name: "Aleksei", last_name: "Mikitsik"})
-st_ivanou = Student.new({first_name: "Ivan", last_name: "Ivanou"})
+hw_01 = mentor.set_hw({hw_number: "hw_01", hw_tasks: {task_1_1: "some task_1_1 contents", 
+	task_1_2: "some task_1_2 contents", task_1_3: "some task_1_3 contents", task_1_4: "some task_1_4 contents"}})
 
-hw_1 = mr_aleksandr.set_homework({hw_number: "hw_01", hw_tasks: ["task_1_1", "task_1_2", "task_1_3", "task_1_4"]})
-hw_2 = mr_maksim.set_homework({hw_number: "hw_02", hw_tasks: ["task_2_1", "task_2_2", "task_2_3", "task_2_4"]})
+mentor.subscribed_to_student(student)
 
-st_mikitsik.takes_hw(hw_1) 
-st_mikitsik.hw_done(["answer_1_1", "answer_1_2", "answer_1_3", "answer_1_4"])
+student.takes_hw(hw_01) 
+student.done_hw(["answer_1_1", "answer_1_2", "answer_1_3", "answer_1_4"])
+student.submit_hw
 
-st_ivanou.takes_hw(hw_2)
-st_ivanou.hw_done(["solution_2_1", "solution_2_2", "solution_2_3", "solution_2_4"])
-
-p st_mikitsik.hw_solutions
-p st_ivanou.hw_solutions
-
+mentor.read_notifications!
 
