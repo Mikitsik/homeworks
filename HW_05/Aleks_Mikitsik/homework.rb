@@ -1,5 +1,5 @@
+# set Homework class
 class Homework
-
   attr_reader :hw_number, :hw_tasks
 
   def initialize(homework)
