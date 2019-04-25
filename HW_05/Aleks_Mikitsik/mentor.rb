@@ -1,31 +1,29 @@
 # set Mentor class
 class Mentor < Human
   attr_accessor :notifications
-  attr_reader :homework
 
   def initialize(name)
     @notifications = []
     super
   end
 
-  def hw_set(homework)
-    @homework = homework
-    Homework.new(homework)
+  def create_hw(homework_params)
+    Homework.new(homework_params)
   end
 
-  def subscribed_to_student(student)
-    student.subscribed_by_mentor = self
+  def subscribed_to!(student)
+    student.mentor = self
   end
 
   def read_notifications!
     notifications.map { |note| note[:status] = 'read' }
   end
 
-  def check_hw(hw_student_solution)
-    if hw_student_solution.solved_tasks.size == homework[:hw_tasks].size
-      hw_student_solution.status = 'succeeded'
+  def check!(homework, homework_solution)
+    if homework_solution.solved_tasks.size == homework.hw_tasks.size
+      homework_solution.status = 'succeeded'
     else
-      hw_student_solution.status = 'failed'
+      homework_solution.status = 'failed'
     end
   end
 end

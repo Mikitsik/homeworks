@@ -1,11 +1,11 @@
 # set HomeworkSolution class
-class HomeworkSolution < Homework
+class HomeworkSolution
   attr_accessor :status
   attr_reader :student, :homework, :solved_tasks
 
-  def initialize(solutions)
-    @student = solutions[:student]
-    @homework = solutions[:homework]
-    @solved_tasks = solutions[:solved_tasks]
+  def initialize(student:, homework:, solved_tasks:)
+    @student = student
+    @homework = homework
+    @solved_tasks = solved_tasks
   end
 end
