@@ -9,13 +9,13 @@ class Human
 end
 
 RSpec.describe Human do
-  subject { described_class.new('Piotr', 'Petrov') }
+  subject { described_class.new(first_name: 'Piotr', last_name: 'Petrov') }
 
-  it 'has first_name' do
+  it 'has first name' do
     expect(subject.first_name).to eq('Piotr')
   end
 
-  it 'has last_name' do
-    expect(subject.first_name).to eq('Petrov')
+  it 'has last name' do
+    expect(subject.last_name).to eq('Petrov')
   end
 end

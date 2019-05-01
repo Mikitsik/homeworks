@@ -12,7 +12,7 @@ end
 class Mentor < Human
   attr_accessor :notifications
 
-  def initialize(name)
+  def initialize(first_name:, last_name:)
     @notifications = []
     super
   end
