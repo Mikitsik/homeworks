@@ -39,5 +39,4 @@ class Mentor < Human
 end
 
 RSpec.describe Mentor do
-
 end
