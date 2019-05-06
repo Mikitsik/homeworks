@@ -1,12 +1,4 @@
-# set Human class
-class Human
-  attr_reader :first_name, :last_name
-
-  def initialize(first_name:, last_name:)
-    @first_name = first_name
-    @last_name = last_name
-  end
-end
+require_relative '../../../HW_05/Aleks_Mikitsik/human'
 
 RSpec.describe Human do
   subject { described_class.new(first_name: 'Piotr', last_name: 'Petrov') }

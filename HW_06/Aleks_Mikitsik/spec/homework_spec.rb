@@ -1,12 +1,4 @@
-# set Homework class
-class Homework
-  attr_reader :hw_number, :hw_tasks
-
-  def initialize(hw_number:, hw_tasks:)
-    @hw_number = hw_number
-    @hw_tasks = hw_tasks
-  end
-end
+require_relative '../../../HW_05/Aleks_Mikitsik/homework'
 
 RSpec.describe Homework do
   subject do
