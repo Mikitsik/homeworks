@@ -172,11 +172,46 @@
           - sex (radio button)<br>
           - birthday (input with calendar support)<br>
 
-          When user click on submit button we need to show errors in any variant (bootstrap form, alerts, default form, console log)<br>
+          When user click on submit button we need to show errors in any variant (bootstrap form, alerts, default form, console log)<br><br>
+
+      <!-- Add template for task three here-->
+
+          <form action="#" method="POST">
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user_name" required autofocus>
+            </div>
+            <div>
+              <label for="pass">Password</label>
+              <input type="password" id="pass" name="user_pass" required>
+            </div>
+            <div>
+              <label for="mail">E-mail:</label>
+              <input type="email" id="mail" name="user_mail" required>
+            </div>
+            <div>
+              <input type="radio" id="male" name="sex">
+              <label for="male">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="sex">
+              <label for="female">Female</label>
+            </div>
+            <div>
+              <label for="date">Birthday</label>
+              <input type="date" id="date" name="user_date">
+            </div>
+            <div class="button">
+              <button type="submit" onclick="alert('RED FAT ERROR !!!')" >Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <div class="card">
+
+  <!-- Add template for task four here-->
+
+      <div class="card">
       <div class="card-header"
         id="headingFour">
         <h5 class="mb-0">
