@@ -56,10 +56,63 @@ textarea.hw-textarea {
   overflow: hidden;
 }
 
-/*!!!!!!! layout style here !!!!!!!*/
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-/*---------------------------------*/
+.top-nav {
+  background-color: #074dff;
+  height: 130px;
+}
 
+.main-wrapper {
+  display: flex;
+}
+
+.left-nav {
+  background-color: #83b925;
+  flex-grow: 1;
+  height: 400px;
+}
+
+.wrapper {
+  flex-grow: 2;
+}
+
+.filter-panel {
+  background-color: #9123f3;
+  flex-grow: 1;
+  height: 100px;
+}
+
+.sub-wrapper {
+  display: flex;
+  height: 300px;
+}
+
+.first-cont, .second-cont, .third-cont {
+  flex-grow: 1;
+  min-width: 100px; min-height: 100px; max-height: 300px; max-width: 300px;
+}
+
+.first-cont {
+  background-color: #ffb4de;
+}
+
+.second-cont {
+  background-color: #ffd1b4;
+}
+
+.third-cont {
+  background-color: #ffff9a;
+}
+
+@media screen and (max-width: 500px) {
+  .sub-wrapper {
+    display: block;
+  }
+}
 /*-----> Third task classes <-----*/
 
 /*!!!!!!! layout style here !!!!!!!*/
