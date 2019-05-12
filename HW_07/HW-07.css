@@ -3,32 +3,50 @@
 }
 
 /*-----> First task classes <-----*/
+
 .hw-container {
   /*Add style for position */
+position: relative;
+margin: -20px;
+border: 2px solid black;
+width: 400px;
+height: 300px;
 }
 
 .hw-container > .hw-figure {
   border: 1px solid black;
   width: 100px;
   height: 100px;
+
+  /*I've added these styles here to not duplicate them beneath */
+
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
 }
 
 .hw-container > .hw-figure.hw-square {
   background-color: green;
 
   /*Add style for position and transforming */
+
+  z-index: 1;
 }
 
 .hw-container > .hw-figure.hw-circle {
   background-color: blue;
 
   /*Add style for position and transforming */
+
+  border-radius: 50%;
+  z-index: 2;
 }
 
 .hw-container > .hw-figure.hw-rhomb {
   background-color: yellow;
 
   /*Add style for position and transforming */
+  transform: rotate(45deg) scale(1.4);
 }
 
 /*-----> Second task classes <-----*/
