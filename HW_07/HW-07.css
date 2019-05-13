@@ -112,15 +112,15 @@ textarea.hw-textarea {
 
 /*-----> Third task classes <-----*/
 
-
-
-
-
-
-
-
 /*-----> Four task classes <-----*/
 
-/*!!!!!!! layout style here !!!!!!!*/
+.area-for-task {
+  position: relative;
+  border: 2px solid black;
+  width: 800px;
+  height: 500px;
+}
 
-/*---------------------------------*/
+#button {
+  position: absolute;
+}

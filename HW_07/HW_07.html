@@ -234,11 +234,27 @@
           <img class="hw-border"
             src="task 04.gif"
             width="800"
-            height="500">
+            height="500"><br><br>
+          <div class="area-for-task">
+            <div class="button" id="button">
+              <button>Catch me if you can</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </body>
+<script type="text/javascript">
 
+  var button = document.querySelector('#button');
+
+  function action() {
+    button.style.top = (Math.random()*(450-1)+1) + 'px';
+    button.style.left = (Math.random()*(670-1)+1) + 'px';
+  }
+
+  button.addEventListener('mouseover', action);
+
+</script>
 </html>
